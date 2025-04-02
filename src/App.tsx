@@ -3,6 +3,7 @@ import "./App.css";
 import MyTitle from "./components/MyTitle";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
+import { useEffect } from "react";
 
 const pokemonList = [
   {
@@ -32,6 +33,12 @@ const pokemonList = [
 ];
 
 function App() {
+  useEffect(
+    () => {
+      alert("hello pokemon trainer :)");
+    },
+    []
+  );
   const [pokemonName, setPokemonName] = useState("bulbasaur");
 
   // On récupère le pokemon qui a le meme nom que pokemonName. 
